@@ -24,4 +24,7 @@ public:
 protected:
 	UFUNCTION()
 	void MoveForward(float Value);
+
+	UFUNCTION()
+	void MoveRight(float Value);
 };
