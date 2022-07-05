@@ -30,13 +30,25 @@ void ATankPawn::MoveForward(float Value)
 	TargetAxisValue = Value;
 }
 
+void ATankPawn::MoveRight(float Value)
+{
+	TargetRightAxisValue = Value;
+}
+
 void ATankPawn::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
 
 	FVector CurrentLocation = GetActorLocation();
 	FVector ForwardVector = GetActorForwardVector();
-	FVector movePosition = CurrentLocation + ForwardVector * MoveSpeed * TargetAxisValue;
+	FVector RightVector = GetActorRightVector();
+	FVector movePosition = CurrentLocation + (ForwardVector * MoveSpeed * TargetAxisValue) + (RightVector * MoveSpeed * TargetRightAxisValue);
 	SetActorLocation(movePosition, true);
 }
 
+void ATankPawn::BeginPlay()
+{
+	Super::BeginPlay();
+
+	SetActorLocation(FVector(GetActorLocation().X, GetActorLocation().Y, 0.0f));
+}

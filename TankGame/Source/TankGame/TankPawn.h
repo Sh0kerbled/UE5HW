@@ -17,6 +17,10 @@ public:
 
 	void MoveForward(float Value);
 
+	void MoveRight(float aValue);
+
+	virtual void BeginPlay() override;
+
 	virtual void Tick(float DeltaSeconds) override;
 
 protected:
@@ -29,8 +33,8 @@ protected:
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadWrite, Category = "Components")
 		class UCameraComponent* Camera;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Movement")
-		float MoveSpeed = 100.0f;
+		float MoveSpeed = 30.0f;
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadWrite, Category = "Movement")
 		float TargetAxisValue = 0.0f;
-
+		float TargetRightAxisValue = 0.0f;
 };
