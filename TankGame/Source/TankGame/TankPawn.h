@@ -37,4 +37,8 @@ protected:
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadWrite, Category = "Movement")
 		float TargetAxisValue = 0.0f;
 		float TargetRightAxisValue = 0.0f;
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> main
