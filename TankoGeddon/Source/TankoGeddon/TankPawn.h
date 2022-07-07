@@ -8,7 +8,7 @@
 class UStaticMeshComponent;
 
 UCLASS()
-class TANKGAME_API ATankPawn : public APawn
+class TANKOGEDDON_API ATankPawn : public APawn
 {
 	GENERATED_BODY()
 
@@ -17,12 +17,13 @@ public:
 
 	void MoveForward(float Value);
 
-	void MoveRight(float aValue);
+	void MoveRight(float Value);
+
+	void RotateRight(float Value);
 
 	virtual void BeginPlay() override;
 
 	virtual void Tick(float DeltaSeconds) override;
-
 protected:
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadWrite, Category = "Components")
 		UStaticMeshComponent* BodyMesh;
@@ -34,11 +35,16 @@ protected:
 		class UCameraComponent* Camera;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Movement")
 		float MoveSpeed = 30.0f;
-	UPROPERTY(VisibleDefaultsOnly, BlueprintReadWrite, Category = "Movement")
-		float TargetAxisValue = 0.0f;
-		float TargetRightAxisValue = 0.0f;
-<<<<<<< HEAD
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Movement")
+		float RotationSpeed = 10.0f;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Movement")
+		float InterpoLatoinKey = 0.1f;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite,Category = "TurretRotation")
+		float TurretRotationInterpolationKey = 0.5f;
+	UPROPERTY()
+		class ATankController* TankController;
+private:
+	float TargetAxisValue = 0.0f;
+	float TargetRightAxisValue = 0.0f;
+	float RotateRightAxisValue = 0.0f;
 };
-=======
-};
->>>>>>> main

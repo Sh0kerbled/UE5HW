@@ -4,13 +4,13 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
-#include "TankGameGameModeBase.generated.h"
+#include "TankoGeddonGameModeBase.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class TANKGAME_API ATankGameGameModeBase : public AGameModeBase
+class TANKOGEDDON_API ATankoGeddonGameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
 	
