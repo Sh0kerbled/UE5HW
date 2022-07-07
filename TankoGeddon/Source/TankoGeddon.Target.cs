@@ -3,12 +3,12 @@
 using UnrealBuildTool;
 using System.Collections.Generic;
 
-public class TankGameTarget : TargetRules
+public class TankoGeddonTarget : TargetRules
 {
-	public TankGameTarget( TargetInfo Target) : base(Target)
+	public TankoGeddonTarget( TargetInfo Target) : base(Target)
 	{
 		Type = TargetType.Game;
 		DefaultBuildSettings = BuildSettingsVersion.V2;
-		ExtraModuleNames.AddRange( new string[] { "TankGame" } );
+		ExtraModuleNames.AddRange( new string[] { "TankoGeddon" } );
 	}
 }

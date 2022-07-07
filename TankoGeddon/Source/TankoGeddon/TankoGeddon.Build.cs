@@ -2,9 +2,9 @@
 
 using UnrealBuildTool;
 
-public class TankGame : ModuleRules
+public class TankoGeddon : ModuleRules
 {
-	public TankGame(ReadOnlyTargetRules Target) : base(Target)
+	public TankoGeddon(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
