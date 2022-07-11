@@ -22,7 +22,7 @@ ACannon::ACannon()
 
 void ACannon::Fire()
 {
-	if (!bCanFire || patron == 0)
+	if (!bCanFire || Nuclei == 0)
 	{
 		return;
 	}
@@ -44,9 +44,9 @@ void ACannon::Patroni()
 {
 	GetWorld()->GetTimerManager().ClearTimer(TimerPatronov);
 	bCanFire = true;
-	netpatroni = 0;
-	patron--;
-	GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Blue, FString::Printf(TEXT("Patronov:%d"), patron));
+	NoAmmo = 0;
+	Nuclei--;
+	GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Blue, FString::Printf(TEXT("Patronov:%d"), Nuclei));
 	return;
 }
 

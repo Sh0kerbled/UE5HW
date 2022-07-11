@@ -23,7 +23,7 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components")
 		float ReloadTime = 1.0f;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "patroni")
-	int patron = 30;
+	int Nuclei = 30;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "patroni")
 	int bs = 10;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "patroni")
@@ -38,7 +38,7 @@ public:
 private:
 	bool bCanFire = true;
 
-	int netpatroni = 0;
+	int NoAmmo = 0;
 
 	void Patroni();
 };
